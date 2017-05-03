@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    hashie (3.4.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  hashie
+
+BUNDLED WITH
+   1.11.2

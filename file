@@ -1,0 +1,8 @@
+--- !ruby/object:Story
+dialog:
+- !ruby/object:Dialog
+  content: Hello how are you
+  character: &1 !ruby/object:StoryCharacter
+    voice: Allison
+characters:
+  :narrator: *1
