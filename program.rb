@@ -5,26 +5,26 @@ Story.new.build do
   MIDDLE_GOAT = 'Middle Billy Goat Gruff'
   BIG_GOAT = 'Great Big Billy Goat Gruff'
 
-  character :narrator => :allison
-  character :little_goat => :oliver
-  character :middle_goat => :fred
-  character :big_goat => :tom
-  character :troll => :ralph
+  character narrator: :allison
+  character little_goat: :oliver
+  character middle_goat: :fred
+  character big_goat: :tom
+  character troll: :ralph
 
   template :trip_trap do
-    narrator "Triptrap triptrap, he went over the wooden bridge."
+    narrator 'Triptrap triptrap, he went over the wooden bridge.'
   end
 
   template :troll_shout do
-    troll "Who is that trip-trapping over my bridge?"
-    narrator "shouted the ugly troll."
+    troll 'Who is that trip-trapping over my bridge?'
+    narrator 'shouted the ugly troll.'
   end
 
   template :troll_climb do
-    troll "No, you are not!"
-    narrator "growled the troll."
-    troll "I am going to eat you first"
-    narrator "And he climbed up onto the bridge"
+    troll 'No, you are not!'
+    narrator 'growled the troll.'
+    troll 'I am going to eat you first'
+    narrator 'And he climbed up onto the bridge'
   end
 
   template :frightened_goat do |t|
@@ -32,9 +32,9 @@ Story.new.build do
   end
 
   template :eat_grass do |t|
-    self.send(t.voice, "It is I #{t.goat}")
-    narrator "Replied the goat"
-    self.send(t.voice, "I am going over to the meadow to eat the green grass")
+    send(t.voice, "It is I #{t.goat}")
+    narrator 'Replied the goat'
+    send(t.voice, 'I am going over to the meadow to eat the green grass')
   end
 
   page do
@@ -53,7 +53,7 @@ Story.new.build do
   end
 
   big_goat do
-    "There is plenty of yummy green grass over there,"
+    'There is plenty of yummy green grass over there'
   end
 
   narrator do
@@ -62,7 +62,7 @@ Story.new.build do
   end
   #
   big_goat do
-    pronounce "content" => "cun tint"
+    pronounce 'content' => 'cun tint'
 
     "All we have to do is cross the wood bridge, and we can eat to
      our hearts content!"
@@ -76,7 +76,7 @@ Story.new.build do
   end
 
   big_goat do
-    "Which one of will be brave enough to cross the bridge"
+    'Which one of will be brave enough to cross the bridge'
   end
 
   narrator do
@@ -84,11 +84,11 @@ Story.new.build do
   end
 
   little_goat do
-    "I will cross the bridge!"
+    'I will cross the bridge!'
   end
 
   narrator do
-    "And off he went, down the hillside."
+    'And off he went, down the hillside.'
   end
 
   trip_trap
@@ -101,7 +101,7 @@ Story.new.build do
 
   frightened_goat LITTLE_GOAT
 
-  narrator "But he knew what to say"
+  narrator 'But he knew what to say'
 
   little_goat do
     "I would not make a very good meal. Can you see how little I am?
@@ -109,11 +109,11 @@ Story.new.build do
      fatter than me!"
   end
 
-  narrator "The greedy troll thought about it."
+  narrator 'The greedy troll thought about it.'
 
-  troll "All right,"
+  troll 'All right,'
 
-  narrator "He said."
+  narrator 'He said.'
 
   narrator do
     "So #{LITTLE_GOAT} went trip trap, trip trap across the wood bridge and
@@ -125,7 +125,7 @@ Story.new.build do
     his younger brother,"
   end
 
-  big_goat "It is your turn now."
+  big_goat 'It is your turn now.'
 
   narrator "So #{MIDDLE_GOAT} trotted down the hillside."
 
@@ -139,22 +139,22 @@ Story.new.build do
 
   frightened_goat MIDDLE_GOAT
 
-  narrator "But he did not let the troll see that"
+  narrator 'But he did not let the troll see that'
 
   middle_goat do
     "You should wait for my brother, #{BIG_GOAT}"
   end
 
-  narrator "He said"
+  narrator 'He said'
 
   middle_goat do
     "He is the biggest and fattest of us all,
     and he would make much tastier meal for you"
   end
 
-  troll "All right,"
+  troll 'All right,'
 
-  narrator "said the troll"
+  narrator 'said the troll'
 
   narrator do
     "So #{MIDDLE_GOAT} trip trap, trip trap over

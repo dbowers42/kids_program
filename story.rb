@@ -1,6 +1,7 @@
 require 'hashie'
 require './talker'
 
+# Class that defines DSL for read stories
 class Story
   include Talker
 
@@ -13,7 +14,7 @@ class Story
   end
 
   def pronounce(map)
-    self.phonetic_rules.merge!(map)
+    phonetic_rules.merge!(map)
   end
 
   def character(map)
@@ -33,7 +34,7 @@ class Story
   end
 
   def build(&block)
-    self.instance_eval(&block)
+    instance_eval(&block)
   end
 
   protected
@@ -46,7 +47,7 @@ class Story
 
   def apply_phonetic_rules(text)
     transformed = text.dup
-    self.phonetic_rules.each do |(from, to)|
+    phonetic_rules.each do |(from, to)|
       transformed.gsub!(from, to)
     end
 
